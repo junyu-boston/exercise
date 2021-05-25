@@ -48,3 +48,22 @@ print(current_variables)
 
 # sklearn has class to do this:
 import sklearn.feature_selection.SequentialFeatureSelector
+
+
+#cumulative gains construction
+# Import the matplotlib.pyplot module 
+import matplotlib as plt
+
+# Import the scikitplot module
+import scikitplot as skplt
+
+# Plot the cumulative gains graph and lift curve
+# lift curve shows how many times more than average the model reaches targets when a given percentage of the population 
+# that is most likely to be target according to the model is considered.
+skplt.metrics.plot_cumulative_gain(targets_test, predictions_test)
+skplt.metrics.plot_lift_curve(true_values, predictions)
+plt.show()
+
+
+
+
