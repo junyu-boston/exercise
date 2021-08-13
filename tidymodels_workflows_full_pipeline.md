@@ -79,7 +79,7 @@ mean = mean(.estimate),
 sd = sd(.estimate))
 ```
 
-**The purpose of fit_resample() is to EVALUATE/SELECT MODELS 
+**The purpose of fit_resample() is to EVALUATE/SELECT MODELS**
 - explore and compare the performance profile of different model types
 - Select best performing model type and focus on model fitting efforts
 
