@@ -55,7 +55,7 @@ ggplot(mpg_test_results, aes(x = hwy, y = .pred)) +
  
 ```
 
-3. Streamlining model fitting: the last_fit() function
+4. Streamlining model fitting: the last_fit() function
 
 Takes a model speci,cation, model formula, and data split object
 
