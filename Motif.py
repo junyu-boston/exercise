@@ -1,3 +1,22 @@
+# import Python's 'random' module here
+import random
+# Input:  A list of strings Dna, and integers k and t
+# Output: RandomMotifs(Dna, k, t)
+# HINT:   You might not actually need to use t since t = len(Dna), but you may find it convenient
+def RandomMotifs(Dna, k, t):
+    # place your code here.
+    r = random.randint(0, t-k+1)
+    return [s[r:r+k] for s in Dna]
+
+# Input:  A profile matrix Profile and a list of strings Dna
+# Output: Motifs(Profile, Dna)
+def Motifs(Profile, Dna):
+    # insert your code here
+    return [ProfileMostProbablePattern(s, len(Profile['A']), Profile) for s in Dna]
+        
+  
+
+
 # Copy your GreedyMotifSearchWithPseudocounts function (along with all required subroutines) from Motifs.py below this line
 def GreedyMotifSearchWithPseudocounts(Dna,k,t):
     BestMotifs = []
