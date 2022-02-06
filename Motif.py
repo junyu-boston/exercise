@@ -16,6 +16,19 @@ def GreedyMotifSearchWithPseudocounts(Dna,k,t):
                     
 import random
 
+def RepeatedRandomizedMotifSearch(Dna,k,t,N):
+    BestScore = float('inf')
+    BestMotifs = []
+    for i in range(N):
+        Motifs = RandomizedMotifSearch(Dna, k, t)
+        CurrScore = Score(Motifs)
+        if CurrScore < BestScore:
+            BestScore = CurrScore
+            BestMotifs = Motifs
+    return BestMotifs
+
+
+
 # Input:  Positive integers k and t, followed by a list of strings Dna
 # Output: RandomizedMotifSearch(Dna, k, t)
 def RandomizedMotifSearch(Dna, k, t):
